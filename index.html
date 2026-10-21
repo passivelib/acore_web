@@ -12,7 +12,11 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header wrap">
     <a class="brand" href="./" aria-label="AntennaCore home"><img src="assets/antennacore-logo.svg" width="300" height="51" alt="AntennaCore"></a>
-    <a class="header-contact" href="mailto:info@antennacore.com">Get in touch <span aria-hidden="true">↗</span></a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contacts.html">Contacts</a>
+    </nav>
   </header>
 
   <main id="main">
@@ -22,7 +26,6 @@
         <h1 id="headline">Building the core of <em>beamsteering.</em></h1>
         <p class="intro">We are building beamsteering chips and phased array antennas.</p>
         <p class="hero-detail">Bringing RF integrated circuits and antenna engineering together to shape and steer beams electronically.</p>
-        <a class="button" href="mailto:info@antennacore.com">Let’s connect <span aria-hidden="true">↗</span></a>
       </div>
       <figure class="array-figure">
         <svg viewBox="0 0 480 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="array-title array-desc">
@@ -53,12 +56,49 @@
     <section class="technology wrap" aria-labelledby="technology-heading">
       <div class="section-heading"><p class="eyebrow">Our technology</p><h2 id="technology-heading">Two disciplines.<br>One direction.</h2></div>
       <div class="technology-items">
-        <article><span class="number">01 / SILICON</span><h3>Beamsteering chips</h3><p>We are developing RF integrated circuits to control the phase and timing of signals across antenna elements—the foundation of electronic beamsteering.</p></article>
-        <article><span class="number">02 / ANTENNAS</span><h3>Phased array antennas</h3><p>We are developing antenna arrays that work together to form and steer a beam, bringing chip-level control into the antenna architecture.</p></article>
+        <article><figure class="technology-image"><img src="assets/beamsteering-chip-concept.png" width="396" height="303" alt="Concept illustration of a beamsteering chip" loading="lazy"><figcaption>Chip concept illustration</figcaption></figure><span class="number">01 / SILICON</span><h3>Beamsteering chips</h3><p>We are developing RF integrated circuits to control the phase and timing of signals across antenna elements—the foundation of electronic beamsteering.</p></article>
+        <article><figure class="technology-image"><img src="assets/phased-array-large-concept.png" width="1448" height="1086" alt="Concept illustration of a larger multi-element phased array antenna" loading="lazy"><figcaption>Array concept illustration</figcaption></figure><span class="number">02 / ANTENNAS</span><h3>Phased array antennas</h3><p>We are developing antenna arrays that work together to form and steer a beam, bringing chip-level control into the antenna architecture.</p></article>
       </div>
     </section>
 
-    <section class="contact" aria-labelledby="contact-heading"><div class="wrap contact-inner"><div><p class="eyebrow">Start a conversation</p><h2 id="contact-heading">Let’s build what’s next.</h2><p>Connect with us about our technology and collaboration.</p></div><a href="mailto:info@antennacore.com">info@antennacore.com <span aria-hidden="true">↗</span></a></div></section>
+    <section class="beam-section" aria-labelledby="beam-heading">
+      <div class="wrap beam-layout">
+        <div class="beam-copy">
+          <p class="eyebrow">Inside the technology</p>
+          <h2 id="beam-heading">A shared signal.<br>A controlled direction.</h2>
+          <p>A phased array combines signals from many antenna elements. Changing their relative phase changes the direction in which those signals reinforce one another.</p>
+          <p>Our chip and antenna development brings these two sides together: how signals are controlled, and how they radiate.</p>
+        </div>
+        <figure class="beam-demo">
+          <svg viewBox="0 0 500 360" role="img" aria-labelledby="beam-title beam-desc">
+            <title id="beam-title">Electronic beamsteering concept</title>
+            <desc id="beam-desc">A row of eight antenna elements with a beam sweeping left and right to illustrate electronic beamsteering.</desc>
+            <defs><linearGradient id="demo-beam" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#65b5e9" stop-opacity=".65"/><stop offset="1" stop-color="#65b5e9" stop-opacity="0"/></linearGradient></defs>
+            <path d="M70 270a180 180 0 0 1 360 0M130 270a120 120 0 0 1 240 0M190 270a60 60 0 0 1 120 0" fill="none" stroke="#294255"/>
+            <path d="M250 270V48" stroke="#607888" stroke-dasharray="4 7"/>
+            <g id="steered-beam" transform="rotate(20 250 270)"><path d="M250 270 194 40Q250 16 306 40Z" fill="url(#demo-beam)"/><path d="M250 270V40" stroke="#83c4ed" stroke-width="2"/></g>
+            <path d="M67 292H433" stroke="#52758d" stroke-width="2"/>
+            <g fill="#83c4ed"><rect x="66" y="270" width="26" height="17" rx="3"/><rect x="114" y="270" width="26" height="17" rx="3"/><rect x="162" y="270" width="26" height="17" rx="3"/><rect x="210" y="270" width="26" height="17" rx="3"/><rect x="258" y="270" width="26" height="17" rx="3"/><rect x="306" y="270" width="26" height="17" rx="3"/><rect x="354" y="270" width="26" height="17" rx="3"/><rect x="402" y="270" width="26" height="17" rx="3"/></g>
+            <text x="250" y="327" text-anchor="middle" fill="#b8c7d3" font-size="11" font-family="Arial, sans-serif" letter-spacing="2">ANTENNA ELEMENTS</text>
+          </svg>
+          <figcaption>Beamsteering concept · schematic illustration</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="approach wrap" aria-labelledby="approach-heading">
+      <div class="approach-heading"><p class="eyebrow">Our approach</p><h2 id="approach-heading">Engineering across<br>the interfaces.</h2><p>Chip design and antenna architecture are closely connected. We develop them with a shared view of the RF signal path.</p></div>
+      <ol class="approach-steps">
+        <li><span class="number">01 / CONTROL</span><h3>Shape the signal</h3><p>RF circuit architecture, phase control and true-time-delay techniques form the starting point for beamsteering.</p></li>
+        <li><span class="number">02 / INTEGRATE</span><h3>Connect the elements</h3><p>Antenna design, RF integration and packaging connect the silicon with the array.</p></li>
+        <li><span class="number">03 / VALIDATE</span><h3>Bring design to hardware</h3><p>Simulation, silicon characterisation and antenna measurements inform the next design iteration.</p></li>
+      </ol>
+    </section>
+
+    <section class="team-preview wrap" aria-labelledby="team-preview-heading">
+      <div><p class="eyebrow">The people behind AntennaCore</p><h2 id="team-preview-heading">RF silicon meets<br>antenna expertise.</h2><p>Dr.-Ing. Arndt Ott and Dr. Milenko Milicevic bring complementary experience in RF architecture, integrated circuits and phased arrays.</p><a class="text-link" href="about.html">Meet our founders <span aria-hidden="true">↗</span></a></div>
+      <div class="team-preview-portraits"><figure><img src="assets/arndt-ott.png" width="144" height="144" loading="lazy" alt="Dr.-Ing. Arndt Ott"><figcaption>Arndt Ott<span>Systems &amp; antennas</span></figcaption></figure><figure><img src="assets/milenko-milicevic.jpg" width="144" height="144" loading="lazy" alt="Dr. Milenko Milicevic"><figcaption>Milenko Milicevic<span>RFIC &amp; silicon</span></figcaption></figure></div>
+    </section>
   </main>
   <footer class="wrap"><span>© AntennaCore</span><span>Beamsteering chips. Phased array antennas.</span></footer>
 </body>
